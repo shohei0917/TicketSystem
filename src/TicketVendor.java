@@ -22,7 +22,12 @@ public class TicketVendor {
     }
 
     public void addItemToCart(int itemId){
-
+        for(Item item:ProductList){
+            if( item.getId() == itemId ){
+                cart.addItem( item ) ;
+                break ;
+            }
+        }
     }
 
     public void showCartItems(){
