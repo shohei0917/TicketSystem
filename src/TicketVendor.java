@@ -15,12 +15,18 @@ public class TicketVendor {
 
 //    商品一覧の表示
     public void showItems(){
+        System.out.println( "商品　　　　　金額" );
         for(Item item:ProductList){
-//            toString -> itemクラス内のオーバーライド準拠
-            System.out.println(item.toString()) ;
+//            表示要件例）1.特製ラーメン　1000円
+            String text =
+                    item.getId() + "."
+                    + item.getName() + "　"
+                    + item.getPrice() + "円" ;
+            System.out.println(text) ;
         }
     }
 
+//    カートに商品の追加
     public void addItemToCart(int itemId){
         for(Item item:ProductList){
             if( item.getId() == itemId ){
@@ -30,8 +36,12 @@ public class TicketVendor {
         }
     }
 
+//    カート内商品の表示
     public void showCartItems(){
-
+        System.out.println("商品　　　　　　　　数量");
+        for( List<CartItem> cartItem : cart.getCartItems() ){
+            System.out.println( cartItem.toString() ) ;
+        }
     }
 
     public boolean showChange(int payment){
