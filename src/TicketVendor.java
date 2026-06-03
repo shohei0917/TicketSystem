@@ -39,9 +39,11 @@ public class TicketVendor {
 //    カート内商品の表示
     public void showCartItems(){
         System.out.println("商品　　　　　　　　数量");
-        for( List<CartItem> cartItem : cart.getCartItems() ){
+        for( CartItem cartItem : cart.getCartItems() ){
             System.out.println( cartItem ) ;
         }
+        int totalPrice = cart.getTotalPrice() ;
+        System.out.println("合計" + totalPrice + "円です。");
     }
 
 //    お釣りの計算
