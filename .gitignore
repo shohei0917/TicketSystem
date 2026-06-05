@@ -1,0 +1,7 @@
+# Javaが自動生成する実行用ファイルを無視
+out/
+*.class
+
+# IntelliJが自動生成する設定ファイルを無視
+.idea/workspace.xml
+.idea/libraries/
