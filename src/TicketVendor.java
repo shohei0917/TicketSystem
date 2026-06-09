@@ -40,7 +40,7 @@ public class TicketVendor {
     public void showCartItems(){
         System.out.println("商品　　　　　　　　数量");
         for( CartItem cartItem : cart.getCartItems() ){
-            System.out.println( cartItem ) ;
+            System.out.println( cartItem.getName() + "  " + cartItem.getQuantity() ) ;
         }
         int totalPrice = cart.getTotalPrice() ;
         System.out.println("合計" + totalPrice + "円です。");
