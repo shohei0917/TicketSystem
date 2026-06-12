@@ -16,11 +16,7 @@ public class Cart {
             }
         }
         if(!found){
-            CartItem newItem=new CartItem();
-            newItem.setId(item.getId());
-            newItem.setName(item.getName());
-            newItem.setPrice(item.getPrice());
-            newItem.setQuantity(1);
+            CartItem newItem=new CartItem(item.getId(),item.getName(),item.getPrice());
             cartItems.add(newItem);
         }
 
